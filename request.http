@@ -1,0 +1,43 @@
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "Hiendao",
+    "password": "123456789",
+    "email": "daovanhien3@gmail.com"
+}
+
+###
+
+POST http://192.168.72.1:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "Hiendao",
+    "password": "123456789"
+}
+
+###
+
+POST http://localhost:5000/api/v1/apartment/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4MjI5MWYzNTQ0MTE2YmE0ZGM0N2QiLCJpYXQiOjE3MDk3MzY3MTV9.I3JVmpGqFICUGkcucOOYWqBFO_osQcft90EsdRNV2yg
+
+{
+    "roomCount": 8,
+    "address": "Ha Dong, Ha Noi"
+}
+
+###
+
+GET http://localhost:5000/api/v1/apartment/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4MjI5MWYzNTQ0MTE2YmE0ZGM0N2QiLCJpYXQiOjE3MDk3NzYwMzJ9.Ew4Q5qLIEYpYcXio6iTfxjqteGuoR2DcBobm4DwiqW0
+
+###
+
+DELETE http://localhost:5000/api/v1/apartment/delete/65e822bcf3544116ba4dc480
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4MjI5MWYzNTQ0MTE2YmE0ZGM0N2QiLCJpYXQiOjE3MDk3MTg5MjF9.v3cXXECKS3UZEFU4kBjLLkQtvmijNY9EgwXoOTsWBo0
+
+###
+
+POST http://localhost:5000/api/v1/room/create
