@@ -2,19 +2,23 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const TenantSchema = new Schema({
-    name: {
+    fullName: {
         type: String,
         required: true
     },
-    age: {
-        type: Number,
+    gender: {
+        type: String,
+        required: true
+    },
+    phoneNum: {
+        type: String,
         required: true
     },
     dob: {
-        type: Date,
+        type: String,
         required: true
     },
-    hometown: {
+    placeOfOrigin: {
         type: String,
         required: true
     },
@@ -22,14 +26,35 @@ const TenantSchema = new Schema({
         type: Number,
         required: true
     },
-    identityCardImgUrl: {
+    identityCardImages: {
+        type: String
+    },
+    deposit: {
+        type: Number,
+        default: 0
+    },
+    startDate: {
         type: String,
         required: true
+    },
+    endDate: {
+        type: String
+    },
+    note: {
+        type: String,
+        default: ""
+    },
+    roomName: {
+        type: String
     },
     room: {
         type: Schema.Types.ObjectId,
         ref: 'rooms'
+    },
+    apartment: {
+        type: Schema.Types.ObjectId,
+        ref: 'apartments'
     }
 })
 
-module.exports = mongoose.model('tenants', tenant)
+module.exports = mongoose.model('tenants', TenantSchema)

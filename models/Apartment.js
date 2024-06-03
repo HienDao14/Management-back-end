@@ -2,19 +2,37 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const ApartmentSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
     roomCount: {
         type: Number,
         required: true
+    },
+    roomEmpty: {
+        type: Number
     },
     address: {
         type: String,
         required: true,
         unique: true
     },
-    description: {
-        type: String
+    getBillDate: {
+        type: Number,
+        default: 1
     },
-    area: {
+    description: {
+        type: String,
+        default: ""
+    },
+    defaultElecPrice: {
+        type: Number
+    },
+    defaultWaterPrice: {
+        type: Number
+    },
+    defaultRoomPrice: {
         type: Number
     },
     user: {

@@ -13,9 +13,29 @@ POST http://192.168.72.1:5000/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "username": "Hiendao",
+    "username": "hiendao1411@gmail.com",
     "password": "123456789"
 }
+
+###
+
+POST http://192.168.72.1:5000/api/v1/auth/refresh-token
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiaGllbmRhbzE0MTFAZ21haWwuY29tIn0sImlhdCI6MTcxMTA5NDI3MiwiZXhwIjoxNzExMDk0ODcyfQ.iuTfHdluT4koyWluyK_cYhGBV5oENbtWSNYYRBVwrzI
+
+{
+    "refreshToken": "vLr04iK3GTWWbTMQ"
+}
+
+###
+
+POST http://192.168.72.1:5000/api/v1/auth/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTIzMjc3ODJ9.IQfw-Xf2HPolTD1KUAu6To0VUYgiaN3Pa1RvFE5onWk
+
+
+###
+
+POST http://localhost:5000/api/v1/auth/forgot-password?userEmail="hiendao1411@gmail.com"
 
 ###
 
@@ -30,8 +50,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4M
 
 ###
 
-GET http://localhost:5000/api/v1/apartment/get
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4MjI5MWYzNTQ0MTE2YmE0ZGM0N2QiLCJpYXQiOjE3MDk3NzYwMzJ9.Ew4Q5qLIEYpYcXio6iTfxjqteGuoR2DcBobm4DwiqW0
+GET http://localhost:5000/api/v1/apartment/get/65e820e95add9308fe28f9da
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTIzMjY4Nzd9.sJfV4O_bC5Xg5S6wo1iXmfmwF_bKvV1D1Arb55rD_vo
 
 ###
 
@@ -41,3 +61,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4M
 ###
 
 POST http://localhost:5000/api/v1/room/create
+
+###
+
+GET http://localhost:5000/api/v1/user/get-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTIzMjgzNzl9.J7N-_q6EkI6qH93eMPjm7pkPouJXrHH9rJVDO1dQnuA
+
+###
+
+GET http://localhost:5000/api/v1/apartment/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTI2NDgzNTF9.A_GDoDJbJRbLdS0DaxkuHLpK8Tyg_v72pSqz4PXtI6w
+
+###
+
+PUT http://localhost:5000/api/v1/apartment/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTI2NDgzNTF9.A_GDoDJbJRbLdS0DaxkuHLpK8Tyg_v72pSqz4PXtI6w
+
+###
+
+GET  http://localhost:5000/api/v1/room/get
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU3MTE5NDQ4ODdjY2UxODZiNDk4NjAiLCJpYXQiOjE3MTI2NDgzNTF9.A_GDoDJbJRbLdS0DaxkuHLpK8Tyg_v72pSqz4PXtI6w

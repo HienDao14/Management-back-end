@@ -8,45 +8,31 @@ const RoomSchema = new Schema({
     },
     tenantNumber: {
         type: Number,
-        required: true,
-        default: 1
+        default: 0
     },
     elecPricePerNum: {
         type: Number,
-        required: true
     },
     pricePerMonth: {
         type: Number,
-        required: true
     },
     waterPricePerMonth: {
         type: Number,
-        required: true
-    },
-    elecNumBefore: {
-        type: Number,
-        // required: true,
-        default: 0
-    },
-    elecNumNow: {
-        type: Number,
-        //required: true,
-        default: 0
     },
     description: {
         type: String,
-        //required: true,
         default: ""
     },
-    totalPrice: {
-        type: String,
-        //required: true,
-        default: ""
+    available: {
+        type: Boolean,
+        default: true
     },
-    status: {
-        type: String,
-        required: true,
-        default: "Available"
+    area: {
+        type: Number
+    },
+    unpaidBill: {
+        type: Number,
+        default: 0
     },
     apartment: {
         type: Schema.Types.ObjectId,
