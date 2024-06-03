@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken')
-
+const authMethod = require('./auth_method')
 
 // jwt header: Authorization: Bearer *token*
-const verifyToken = (req, res, next) => {
+const verifyToken = async (req, res, next) => {
     const authHeader = req.header('Authorization')
     const token = authHeader && authHeader.split(' ')[1]
 
